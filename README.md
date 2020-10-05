@@ -1,5 +1,14 @@
 # heimdall_tools_action
-GitHub Action for Heimdall Tools
+GitHub Action for [Heimdall Tools](https://github.com/mitre/heimdall_tools)
+
+Easily convert supported formats to Heimdall Data Format for use with Heimdall Enterprise Server, Heimdall Lite, or any other HDF-compatible viewer.
+
+
+## Required Input and Output Arguments
+## Optional Input and Output Arguments
+## Secrets
+## Environment Variables
+## Example
 
 ## Contributing, Issues and Support
 
