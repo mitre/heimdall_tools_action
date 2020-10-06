@@ -35,6 +35,24 @@ Internally, the action's entrypoint uses the environment variables passed via ac
 
 ## Example
 
+Below is an example action. The idea is that a previous action would have generated the Nikto output (in this case, `nikto.json`) and the Heimdall Tools action will follow up and convert `nikto.json` to `heimdall_nikto` in HDF for use with Heimdall Enterprise server or Heimdall Lite.
+
+```
+on: [push]
+jobs:
+  heimdall_tools_conversion:
+    runs-on: ubuntu-latest
+    name: Heimdall Tools Convert Nikto to HDF
+    steps:
+      - name: checkout
+        uses: actions/checkout@v2
+      - name: Convert Nikto
+        uses: mitre/heimdall_tools_action@main
+        with:
+          file: 'nikto.json'
+          converter: 'nikto_mapper'
+```
+
 ## Contributing, Issues and Support
 
 ### Contributing
