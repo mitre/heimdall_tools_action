@@ -1,7 +1,11 @@
 name: 'Heimdall Tools'
+author: The MITRE Corporation
 description: >
   Easily convert supported formats to Heimdall Data Format for use with Heimdall Enterprise Server, Heimdall Lite, or
   any other HDF-compatible viewer.'
+branding:
+  icon: 'repeat'
+  color: 'gray-dark'
 inputs:
   file:
     description: 'File to convert into HDF'
