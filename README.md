@@ -7,12 +7,32 @@ Easily convert supported formats to Heimdall Data Format for use with Heimdall E
 ## Input and Output Arguments
 ### Input
 #### `file-to-convert` (Required)
+
+Filename of the file to convert available in the current directory of the action.
+
 #### `converter` (Required)
+
+One of the available converters from Heimdall Tools.
+
+* `fortify_mapper`
+* `zap_mapper`
+* `burpsuite_mapper`
+* `nessus_mapper`
+* `snyk_mapper`
+* `nikto_mapper`
+
 ### Output
-#### `hdf-output`
+
+The action will output the converted HDF in the format `heimdall_<converter>`. Basic configuration (see the Example section below) would be to consume this file as an output of the GitHub action run.
 
 ## Secrets
+
+This action does not use any GitHub secrets at this time.
+
 ## Environment Variables
+
+Internally, the action's entrypoint uses the environment variables passed via action inputs. GitHub converts inputs to environment variables by prefixing them with `INPUT_`. Examples: `INPUT_FILE` and `INPUT_CONVERTER`.
+
 ## Example
 
 ## Contributing, Issues and Support
