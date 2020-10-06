@@ -4,6 +4,8 @@ jobs:
     runs-on: ubuntu-latest
     name: test
     steps:
+      - name: checkout
+        uses: actions/checkout@v2
       - name: Test
         id: test
         uses: mitre/heimdall_tools_action@main
