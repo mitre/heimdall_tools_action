@@ -23,7 +23,7 @@ One of the available converters from Heimdall Tools.
 
 ### Output
 
-The action will output the converted HDF in the format `heimdall_<converter>`. Basic configuration (see the Example section below) would be to consume this file as an output of the GitHub action run.
+The action will output the converted HDF in the format `heimdall_<converter>.json`. Basic configuration (see the Example section below) would be to consume this file as an output of the GitHub action run.
 
 ## Secrets
 
@@ -35,7 +35,7 @@ Internally, the action's entrypoint uses the environment variables passed via ac
 
 ## Example
 
-Below is an example action. The idea is that a previous action would have generated the Nikto output (in this case, `nikto.json`) and the Heimdall Tools action will follow up and convert `nikto.json` to `heimdall_nikto` in HDF for use with Heimdall Enterprise server or Heimdall Lite.
+Below is an example action. The idea is that a previous action would have generated the Nikto output (in this case, `nikto.json`) and the Heimdall Tools action will follow up and convert `nikto.json` to `heimdall_nikto.json` in HDF for use with Heimdall Enterprise server or Heimdall Lite.
 
 ```
 on: [push]
@@ -44,13 +44,19 @@ jobs:
     runs-on: ubuntu-latest
     name: Heimdall Tools Convert Nikto to HDF
     steps:
-      - name: checkout
+      - name: Checkout
         uses: actions/checkout@v2
       - name: Convert Nikto
         uses: mitre/heimdall_tools_action@main
         with:
           file: 'nikto.json'
           converter: 'nikto_mapper'
+      - name: Artifacts
+        uses: actions/upload-artifact@v1
+        if: success()
+        with:
+          name: nikto
+          path: heimdall_tools_nikto.json
 ```
 
 ## Contributing, Issues and Support
