@@ -1,1 +1,17 @@
-
+name: 'Heimdall Tools'
+description: >
+  Easily convert supported formats to Heimdall Data Format for use with Heimdall Enterprise Server, Heimdall Lite, or
+  any other HDF-compatible viewer.'
+inputs:
+  file:
+    description: 'File to convert into HDF'
+    required: true
+  converter:
+    description: 'Specify which convert to use to convert <file-to-convert>'
+    requried: true
+outputs:
+  hdf-output:
+    description: 'HDF output of <file-to-convert>'
+runs:
+  using: 'docker'
+  image: 'Dockerfile'

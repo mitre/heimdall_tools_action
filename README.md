@@ -4,8 +4,13 @@ GitHub Action for [Heimdall Tools](https://github.com/mitre/heimdall_tools)
 Easily convert supported formats to Heimdall Data Format for use with Heimdall Enterprise Server, Heimdall Lite, or any other HDF-compatible viewer.
 
 
-## Required Input and Output Arguments
-## Optional Input and Output Arguments
+## Input and Output Arguments
+### Input
+#### `file-to-convert` (Required)
+#### `converter` (Required)
+### Output
+#### `hdf-output`
+
 ## Secrets
 ## Environment Variables
 ## Example
