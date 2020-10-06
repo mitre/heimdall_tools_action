@@ -1,0 +1,12 @@
+on: [push]
+jobs:
+  test_job:
+    runs-on: ubuntu-latest
+    name: test
+    steps:
+      - name: Test
+        id: test
+        uses: mitre/heimdall_tools_action@main
+        with:
+          file: 'sample.json'
+          converter: 'nikto_mapper'
