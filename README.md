@@ -20,6 +20,12 @@ One of the available converters from Heimdall Tools.
 * `nessus_mapper`
 * `snyk_mapper`
 * `nikto_mapper`
+* `xccdf_results_mapper`
+* `jfrog_xray_mapper`
+* `dbprotect_mapper`
+* `netsparker_mapper`
+* `sarif_mapper`
+* `scoutsuite_mapper`
 
 ### Output
 
