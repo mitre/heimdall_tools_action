@@ -23,6 +23,24 @@ if [ -n "$INPUT_FILE" ] && [ -n "$INPUT_CONVERTER" ]; then
     "nikto_mapper" )
       heimdall_tools nikto_mapper -j "$INPUT_FILE" -o "heimdall_tools_nikto.json"
       ;;
+    "xccdf_results_mapper")
+      heimdall_tools xccdf_results_mapper -x "$INPUT_FILE" -o "heimdall_tools_xccdf_results.json"
+      ;;
+    "jfrog_xray_mapper")
+      heimdall_tools jfrog_xray_mapper -j "$INPUT_FILE" -o "heimdall_tools_jfrog_xray.json"
+      ;;
+    "dbprotect_mapper")
+      heimdall_tools dbprotect_mapper -x "$INPUT_FILE" -o "heimdall_tools_dbprotect.json"
+      ;;
+    "netsparker_mapper")
+      heimdall_tools netsparker_mapper -x "$INPUT_FILE" -o "heimdall_tools_netsparker.json"
+      ;;
+    "sarif_mapper")
+      heimdall_tools sarif_mapper -j "$INPUT_FILE" -o "heimdall_tools_sarif.json"
+      ;;
+    "scoutsuite_mapper")
+      heimdall_tools scoutsuite_mapper -j "$INPUT_FILE" -o "heimdall_tools_scoutsuite.json"
+      ;;
     * )
       echo "$INPUT_CONVERTER is not a valid Converter";
       exit 1;
