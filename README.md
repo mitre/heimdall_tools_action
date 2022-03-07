@@ -1,5 +1,5 @@
 # heimdall_tools_action
-THIS ACTION IS DEPRECATED. Use mitre/saf_action to replace this action. Find it here: https://github.com/mitre/saf_action
+THIS ACTION IS DEPRECATED. Use the [SAF Action](https://github.com/marketplace/actions/saf-cli-action) instead.
 
 GitHub Action for [Heimdall Tools](https://github.com/mitre/heimdall_tools)
 
