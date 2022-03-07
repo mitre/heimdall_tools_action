@@ -1,4 +1,6 @@
 # heimdall_tools_action
+THIS ACTION IS DEPRECATED. Use mitre/saf_action to replace this action. Find it here: https://github.com/mitre/saf_action
+
 GitHub Action for [Heimdall Tools](https://github.com/mitre/heimdall_tools)
 
 Easily convert supported formats to Heimdall Data Format for use with Heimdall Enterprise Server, Heimdall Lite, or any other HDF-compatible viewer.

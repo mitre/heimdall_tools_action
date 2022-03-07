@@ -9,9 +9,11 @@ inputs:
   file:
     description: 'File to convert into HDF'
     required: true
+    deprecationMessage: 'THIS ACTION IS DEPRECATED. Use mitre/saf_action to replace this action. Find it here: https://github.com/mitre/saf_action'
   converter:
     description: 'Specify which convert to use to convert <file-to-convert>'
     requried: true
+    deprecationMessage: 'THIS ACTION IS DEPRECATED. Use mitre/saf_action to replace this action. Find it here: https://github.com/mitre/saf_action'
 outputs:
   hdf-output:
     description: 'HDF output of <file-to-convert>'
