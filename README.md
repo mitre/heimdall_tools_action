@@ -1,4 +1,4 @@
-# heimdall_tools_action
+# Heimdall Tools Action is DEPRECATED. Use the [SAF Action](https://github.com/marketplace/actions/saf-cli-action) instead.
 THIS ACTION IS DEPRECATED. Use the [SAF Action](https://github.com/marketplace/actions/saf-cli-action) instead.
 
 GitHub Action for [Heimdall Tools](https://github.com/mitre/heimdall_tools)
